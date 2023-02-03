@@ -9,6 +9,7 @@
               <th scope="col">#</th>
               <th scope="col">Имя</th>
               <th scope="col">Описание</th>
+              <th scope="col">Дата обращения</th>
               <th scope="col">Срочность</th>
               <th scope="col">Подробнее</th>
             </tr>
@@ -20,6 +21,7 @@
               <td>{{ complaint.id }}</td>
               <td>{{ complaint.name }}</td>
               <td>{{ complaint.text }}</td>
+              <td>{{ complaint.date }}</td>
               {% if complaint.importance %}
               <td> Срочно </td>
                 {% else %}

@@ -2,57 +2,38 @@
 {% block content %}
 
 
-<!--<div class="container">-->
-<!--    <h2 style="margin-bottom: 30px; font-family: Arial, Helvetica, sans-serif;"  > Добавить неисправность </h2>-->
-<!--<form method="post" enctype="multipart/form-data">-->
-<!--    {% csrf_token %}-->
-<!--<p><label for="id_name" style="margin-bottom: 0px;">Имя:</label>-->
-<!--   <p></p> <input type="text" style="width: 355px;" placeholder="Необязательное поле" name="name" maxlength="30" id="id_name"> </p>-->
-<!--<p><label for="id_text" style="margin-bottom: 0px;">Описание:</label></p>-->
-<!--   <p> <textarea name="text" cols="40" rows="3" required="" id="id_text"></textarea></p>-->
-
-<!--<p><label for="id_importance">Срочность:</label>-->
-
-<!--    <input type="checkbox" style="margin-left: 10px; margin-top: 10px;" name="importance" id="id_importance"></p>-->
-<!--<p><label for="id_files" style="margin-bottom: 0px;">Файлы:</label></p>-->
-<!--   <p> <input type="file" style="margin-bottom: 20px;" name="files" multiple="multiple" id="id_files"></p>-->
-
-<!--<button type="submit" class="btn btn-primary">Добавить</button>-->
-
-<!--</form>-->
-<!--    </div>-->
-
 <div class="container">
   <h1>Обратная связь</h1>
 <form style="margin-top: 25px;" method="post" enctype="multipart/form-data">
     {% csrf_token %}
   <fieldset>
-
     <legend>Добавить неисправность</legend>
-    <div class="form-group" style="margin-top: 30px;">
-      <label for="id_name"> Вашe имя: </label>
-      <input type="text" id="id_name" name="name" class="form-control" placeholder="Необязательное поле">
-    </div>
-
-    <div class="form-group">
-      <label for="id_text"> Описание: </label>
-      <textarea type="text" name="text" id="id_text" style="margin-bottom: 30px;" required="" class="form-control"></textarea>
-    </div>
-
-    <div class="custom-file">
-  <input type=file class="custom-file-input"  id="id_files" name="files" multiple="multiple">
-  <label class="custom-file-label" for="id_files" data-browse="Открыть"> Выбрать документ... </label>
-   </div>
 
 
-    <div class="custom-control custom-switch" style="margin-top: 30px;">
-      <input type="checkbox"  class="custom-control-input" name="importance" id="id_importance">
-      <label class="custom-control-label" for="id_importance">Срочность</label>
-    </div>
+      {{ form.as_p }}
+      <button style="margin-top: 20px;" class="btn btn-primary"> Отправить </button>
 
+<!--    <div class="form-group" style="margin-top: 30px;">-->
+<!--      <label for="id_name"> Вашe имя: </label>-->
+<!--      <input type="text" id="id_name" name="name" class="form-control" placeholder="Необязательное поле">-->
+<!--    </div>-->
 
+<!--    <div class="form-group">-->
+<!--      <label for="id_text"> Описание: </label>-->
+<!--      <textarea type="text" name="text" id="id_text" style="margin-bottom: 30px;" required="" class="form-control"></textarea>-->
+<!--    </div>-->
 
-    <button style="margin-top: 30px;" type="submit" class="btn btn-primary"> Отправить </button>
+<!--    <div class="custom-file">-->
+<!--  <input type=file class="custom-file-input"  id="id_files" name="files" multiple="multiple">-->
+<!--  <label class="custom-file-label" for="id_files" data-browse="Открыть"> Выбрать документ... </label>-->
+<!--   </div>-->
+
+<!--    <div class="custom-control custom-switch" style="margin-top: 30px;">-->
+<!--      <input type="checkbox"  class="custom-control-input" name="importance" id="id_importance">-->
+<!--      <label class="custom-control-label" for="id_importance">Срочность</label>-->
+<!--    </div>-->
+
+<!--    <button style="margin-top: 30px;" type="submit" class="btn btn-primary"> Отправить </button>-->
   </fieldset>
 </form>
     </div>
